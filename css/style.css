@@ -16,21 +16,24 @@ p {
     font-weight: 300;
 }
 
-#hero-bg-img {
+.moving-clouds {
+    position: absolute;
+}
+
+#big-cloud {
     position: absolute;
     height: 300px;
     top: 5px;
     left: 0px;
-    animation: cloud-move 30s linear  infinite forwards;
-    overflow: hidden;
+    animation: cloud-move 45s linear  infinite forwards;
 }
 
 @keyframes cloud-move {
     from {
-        transform: translateX(-50vw);
+        transform: translateX(-20vw);
         opacity: 0;
     }
-    10% {
+    5% {
         opacity: 100;
     }
     90% {
@@ -49,7 +52,7 @@ p {
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(90, 165, 212);
+    /* background-color: rgb(122, 187, 228); */
     gap: 10px;
 }
 
@@ -75,10 +78,26 @@ p {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     transition: 0.3s;
+    font-family: inherit;
+    font-weight: bold;
 }
 
 .signup-btn:hover,
 .login-btn:hover {
     background-color: rgb(141, 220, 245);
     cursor: pointer;
+}
+
+.spacer {
+    aspect-ratio: 960/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(../svg/grass.svg);
+    position: absolute;
+    z-index: -1;
 }
