@@ -2,7 +2,8 @@
 
 body {
     margin: 0;
-    font-family: Fustat ;
+    font-family: Fustat;
+    overflow: hidden;
 }
 
 h1 {
@@ -15,6 +16,33 @@ p {
     font-weight: 300;
 }
 
+#hero-bg-img {
+    position: absolute;
+    height: 300px;
+    top: 5px;
+    left: 0px;
+    animation: cloud-move 30s linear  infinite forwards;
+    overflow: hidden;
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translateX(-50vw);
+        opacity: 0;
+    }
+    10% {
+        opacity: 100;
+    }
+    90% {
+        opacity: 100;
+    }
+    to {
+        transform: translateX(100vw);
+        opacity: 0;
+    }    
+}
+
+
 .hero-container {
     height: 100vh;
     display: flex;
@@ -23,9 +51,6 @@ p {
     align-items: center;
     background-color: rgb(90, 165, 212);
     gap: 10px;
-    background-image: url("../img/clouds.png");
-    background-size: 600px;
-    background-repeat: space;
 }
 
 .hero-heading {
@@ -33,7 +58,7 @@ p {
 }
 
 .hero-text {
-    color: rgb(163, 229, 249);
+    color: rgb(255, 255, 255);
 }
 
 .signup-btn{
@@ -46,13 +71,14 @@ p {
 .signup-btn,
 .login-btn {
     border: none;
-    color:rgb(255, 255, 255);
-    background-color: black;
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     transition: 0.3s;
 }
 
 .signup-btn:hover,
 .login-btn:hover {
-    background-color: rgb(163, 229, 249);;
+    background-color: rgb(141, 220, 245);
+    cursor: pointer;
 }
