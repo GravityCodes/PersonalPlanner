@@ -1,0 +1,58 @@
+
+
+body {
+    margin: 0;
+    font-family: Fustat ;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 800;
+}
+
+p {
+    margin: 0;
+    font-weight: 300;
+}
+
+.hero-container {
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(90, 165, 212);
+    gap: 10px;
+    background-image: url("../img/clouds.png");
+    background-size: 600px;
+    background-repeat: space;
+}
+
+.hero-heading {
+    color: white;
+}
+
+.hero-text {
+    color: rgb(163, 229, 249);
+}
+
+.signup-btn{
+    padding: 10px 35px;
+}
+.login-btn {
+    padding: 10px 40px;
+}
+
+.signup-btn,
+.login-btn {
+    border: none;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+    background-color: rgb(163, 229, 249);;
+}
